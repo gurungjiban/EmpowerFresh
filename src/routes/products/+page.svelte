@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let products: any[] = [];
-  let name = '';
-  let price = '';
-  let store_id = '';
-  let showTable = false;
-  let message = '';
+  let products = $state<any[]>([]);
+  let name = $state('');
+  let price = $state('');
+  let store_id = $state('');
+  let showTable = $state(false);
+  let message = $state('');
 
   async function loadProducts() {
     try {
