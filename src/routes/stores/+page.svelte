@@ -2,12 +2,12 @@
   import { onMount } from 'svelte';
 
   // State variables
-  let stores: any[] = [];
-  let name = '';
-  let location = '';
-  let customer_id = '';
-  let showTable = false;
-  let message = '';
+  let stores = <any[]>([]);
+  let name = $state('');
+  let location = $state('');
+  let customer_id = $state('');
+  let showTable = $state(false);
+  let message = $state('');
 
   // Load stores from backend
   async function loadStores() {
